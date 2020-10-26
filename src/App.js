@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import RandomJokes from './RandomJokes';
+import Favourites from "./Favourites";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [viewFavourites, setViewFavourites] = useState(false);
+
+	function showFavourite(){
+		setViewFavourites(!viewFavourites)
+	}
+
+	return (
+		<div className="container-fluid">
+			<header className="App-header">
+				<div className="blockquote text-center">Chuck Norris Jokes</div>
+				<div className="blockquote text-center">
+					<button className="btn btn-info" onClick={showFavourite}>{!viewFavourites ? 'Favourites' : 'Get Jokes'}</button>
+					{!viewFavourites ? <RandomJokes ></RandomJokes>: <Favourites ></Favourites>}
+			</div>
+			</header>
+		</div>
+	);
 }
 
 export default App;

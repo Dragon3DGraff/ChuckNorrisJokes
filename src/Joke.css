@@ -1,0 +1,23 @@
+.joke{
+	width: 268px;
+	font-size: 10px;
+	background: #FFFFFF;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.joke-content{
+	display: grid;
+	grid-template-columns: 1fr 15px;
+}
+.star-div{
+	position: relative;
+}
+.star{
+	font-size: 20px;
+	margin: 0px;
+	padding-top: 0px;
+}
+.star:hover {
+	cursor: pointer;
+}
