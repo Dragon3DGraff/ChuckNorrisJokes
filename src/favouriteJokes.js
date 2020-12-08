@@ -35,6 +35,7 @@ const favouriteJokes = {
     let object = {};
     this.array.map((item) => {
       object[item.id] = item;
+      return object;
     });
     return JSON.stringify(object);
   },
