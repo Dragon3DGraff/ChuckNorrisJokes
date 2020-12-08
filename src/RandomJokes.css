@@ -1,11 +1,11 @@
-.random-jokes{
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+.random-jokes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.random-jokes-buttons{
-	margin: 1rem;
+.random-jokes-buttons {
+  margin: 1rem;
 }
-button{
-	margin: 2px;
+button {
+  margin: 2px;
 }
